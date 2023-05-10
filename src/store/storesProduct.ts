@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from "axios";
+import axios from "axios";
 import { Product } from "./interfacesStore/interfaceStore";
 
 export async function getProduct() {
@@ -14,7 +14,7 @@ export async function getProduct() {
 export async function getProductById(id: number) {
 
     const response = await axios.get(
-        `https://fakestoreapi.com/products${id}`);
+        `https://fakestoreapi.com/products/${id}`);
     const products: Product[] = response.data;
 
     return products;
